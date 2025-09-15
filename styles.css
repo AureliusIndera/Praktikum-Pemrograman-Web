@@ -6,8 +6,8 @@
   /* border: 1px solid red; */
 }
 
-header {
-  background: #f4f2ef;
+ header {
+  background: linear-gradient(120deg, #f4f2ef, #e0eeea, #7daf9f);
   color: #006041;
   width: 100%;
   padding: 15px 40px;
@@ -31,18 +31,34 @@ nav {
 .menuUtama a {
   color: white;
   text-decoration: none;
+  transition: 0.2s;
+}
+
+.menuUtama a:hover{
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+  transform: scale(1.03);
 }
 
 nav button {
   background: #ffffff;
   color: #006041;
-  height: 25px;
+  height: 35px;
   width: 110px;
   text-align: center;
   border-radius: 30px;
   border: none;
   outline: none;
   font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  transform: scale(1.03);
+  border: 2px solid white;
+  color: white;
+  background: transparent;
 }
 
 main {
@@ -52,11 +68,19 @@ main {
   background: linear-gradient(120deg, #f4f2ef, #e0eeea, #7daf9f);
 }
 
+#sukses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
 h2 {
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #006041;
 }
 
 article {
@@ -74,6 +98,11 @@ article {
 img {
   width: 300px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.02);
 }
 
 p {
@@ -104,6 +133,14 @@ footer {
   outline: none;
   font-weight: 600;
   margin: 20px 15px 30px 30px;
+  transition: 0.3s;
+}
+
+.left button:hover {
+  transform: scale(1.01);
+  border: 2px solid #006041;
+  color: #006041;
+  background: transparent;
 }
 
 .left {
@@ -111,11 +148,104 @@ footer {
   flex-direction: column;
 }
 
-.loginBox {
-    width: 70%;
-    height: 400px;
-    background: whitesmoke ;
+.formMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formBox {
+    width: 400px;
+    height: fit-content;
+    background:#f4f2ef;
     display: flex;
-    justify-content: center;
-    align-items: center; 
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05), -10px -10px 30px rgba(0, 0, 0, 0.05);
+    color: #006041;
+    font-weight: 600;
+    border: 3px solid #006041;
+}
+
+ion-icon {
+  height: 60px;
+  width: 60px;
+  padding-bottom: 20px;
+}
+
+.form {
+  width: 320px;
+  
+}
+
+label {
+  margin-left: 5px;
+}
+
+input[type="text"], select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+.buttonForm button {
+  width: 125px;
+  height: 35px;
+  border-radius: 40px;
+  margin: 10px 20px;
+  background: #006041;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  transition: 0.3s;
+
+}
+
+.buttonForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form button:hover {
+  background: none;
+  border: 2px solid #006041;
+  color: #006041;
+  
+}
+
+@media (max-width: 768px) {
+  main {
+    height: 150vh;
+  }
+  article {
+    flex-direction: column;   /* stack vertikal */
+    align-items: center;
+  }
+
+  .left {
+    flex-direction: column;   /* biar gambar + tombol tetap vertikal */
+    align-items: center;
+  }
+
+  .paragraf {
+    text-align: center;
+  }
 }
